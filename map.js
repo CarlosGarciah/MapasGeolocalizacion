@@ -6,7 +6,7 @@ var mapa = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 mapa.addTo(map);
 
 function onLocationFound(e) {
-         var radius = e.accuracy / 2;
+         var radius = e.accuracy;
          var location = e.latlng
          L.marker(location).addTo(map)
          L.circle(location, radius).addTo(map);
